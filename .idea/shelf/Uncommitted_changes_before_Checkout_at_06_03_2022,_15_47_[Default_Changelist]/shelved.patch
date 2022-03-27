@@ -1,0 +1,36 @@
+Index: app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/ExploreFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.github.bgrebennikov.devbuff.presentation.ui.fragments\n\nimport android.content.Context\nimport android.os.Bundle\nimport android.util.Log\nimport androidx.fragment.app.Fragment\nimport android.view.LayoutInflater\nimport android.view.View\nimport android.view.ViewGroup\nimport com.github.bgrebennikov.devbuff.R\nimport com.github.bgrebennikov.devbuff.common.TAG\nimport com.github.bgrebennikov.devbuff.databinding.FragmentExploreBinding\nimport com.github.bgrebennikov.devbuff.presentation.ui.fragments.base.BaseFragment\nimport com.github.bgrebennikov.devbuff.presentation.viewModels.ExploreViewModel\n\nclass ExploreFragment : BaseFragment<FragmentExploreBinding>(FragmentExploreBinding::inflate) {\n\n    private val viewModel by lazy {\n        viewModelFactory.create(ExploreViewModel::class.java)\n    }\n\n    override fun onAttach(context: Context) {\n        super.onAttach(context)\n        component.inject(this)\n    }\n\n    override fun onBind(binding: FragmentExploreBinding) {\n        super.onBind(binding)\n\n        viewModel.ideas.observe(viewLifecycleOwner){\n            Log.i(TAG, \"onBind: $it\")\n        }\n\n    }\n\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/ExploreFragment.kt b/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/ExploreFragment.kt
+--- a/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/ExploreFragment.kt	
++++ b/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/ExploreFragment.kt	
+@@ -10,6 +10,7 @@
+ import com.github.bgrebennikov.devbuff.R
+ import com.github.bgrebennikov.devbuff.common.TAG
+ import com.github.bgrebennikov.devbuff.databinding.FragmentExploreBinding
++import com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore.ExploreAdapter
+ import com.github.bgrebennikov.devbuff.presentation.ui.fragments.base.BaseFragment
+ import com.github.bgrebennikov.devbuff.presentation.viewModels.ExploreViewModel
+ 
+@@ -19,6 +20,8 @@
+         viewModelFactory.create(ExploreViewModel::class.java)
+     }
+ 
++//    private val adapter = ExploreAdapter()
++
+     override fun onAttach(context: Context) {
+         super.onAttach(context)
+         component.inject(this)
+@@ -28,7 +31,7 @@
+         super.onBind(binding)
+ 
+         viewModel.ideas.observe(viewLifecycleOwner){
+-            Log.i(TAG, "onBind: $it")
++//            adapter.items = it
+         }
+ 
+     }

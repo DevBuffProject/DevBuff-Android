@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_default">12dp</dimen>
+    <dimen name="corners_radius_small">6dp</dimen>
+    <dimen name="corners_radius_default">12dp</dimen>
+    <dimen name="margin_default">12dp</dimen>
+    <dimen name="margin_low">2dp</dimen>
+    <dimen name="margin_small">6dp</dimen>
+    <dimen name="padding_small">6dp</dimen>
+    <dimen name="corners_radius_large">32dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="padding_chip">8dp</dimen>
+
+    <dimen name="profile_image_size">130dp</dimen>
+    <dimen name="idea_profile_image_large">50dp</dimen>
+
+</resources>

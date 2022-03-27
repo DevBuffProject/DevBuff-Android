@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/padding_default"
+    android:padding="@dimen/padding_default"
+    android:background="@drawable/bg_rect_rounded_white"
+    >
+
+    <ImageView
+        android:id="@+id/ownerPhoto"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/cd_idea_post_owner"
+        android:background="@drawable/bg_rect_rounded_gray_medium_12"
+        />
+
+    <TextView
+        android:id="@+id/ownerFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:text="@string/default_name"
+        android:textSize="6pt"
+        app:layout_constraintBottom_toBottomOf="@+id/ownerPhoto"
+        app:layout_constraintStart_toEndOf="@+id/ownerPhoto"
+        app:layout_constraintTop_toTopOf="@+id/ownerPhoto"
+        android:background="@drawable/bg_rect_rounded_gray_medium_12"
+        android:textColor="@color/gray_medium"
+        />
+
+    <TextView
+        android:id="@+id/ownerUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:text="@string/default_username"
+        app:layout_constraintBottom_toBottomOf="@+id/ownerPhoto"
+        app:layout_constraintStart_toEndOf="@id/ownerFullName"
+        app:layout_constraintTop_toTopOf="@+id/ownerPhoto"
+        android:background="@drawable/bg_rect_rounded_gray_medium_12"
+        android:textColor="@color/gray_medium"
+        />
+
+    <TextView
+        android:id="@+id/ideaTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_idea_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ownerPhoto"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_default"
+        android:textColor="@color/gray_medium"
+        android:background="@drawable/bg_rect_rounded_gray_medium_12"
+        />
+
+    <TextView
+        android:id="@+id/ideaDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/default_description_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ideaTitle"
+        android:layout_marginTop="@dimen/margin_small"
+        android:textSize="6pt"
+        android:textColor="@color/gray_light"
+        android:background="@drawable/bg_rect_rounded_gray_light_12"
+        />
+
+    <TextView
+        android:id="@+id/specialists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/specialists"
+        android:textColor="@color/gray_medium"
+        android:background="@drawable/bg_rect_rounded_gray_medium_12"
+        app:layout_constraintTop_toBottomOf="@+id/ideaDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_default"
+        />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/specialists_chip_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/specialists"
+        android:layout_marginTop="@dimen/margin_small"
+        >
+        <com.google.android.material.chip.Chip
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            />
+        <com.google.android.material.chip.Chip
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            />
+        <com.google.android.material.chip.Chip
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/technologies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/technologies"
+        android:textColor="@color/gray_medium"
+        android:background="@drawable/bg_rect_rounded_gray_medium_12"
+        app:layout_constraintTop_toBottomOf="@+id/specialists_chip_recycler"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_default"
+        />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/technologies_chip_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/technologies"
+        android:layout_marginTop="@dimen/margin_small"
+        >
+        <com.google.android.material.chip.Chip
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            />
+        <com.google.android.material.chip.Chip
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            />
+        <com.google.android.material.chip.Chip
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/languages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/programming_languages"
+        app:layout_constraintTop_toBottomOf="@+id/technologies_chip_recycler"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_default"
+        android:textColor="@color/gray_medium"
+        android:background="@drawable/bg_rect_rounded_gray_medium_12"
+        />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/languages_chip_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/languages"
+        android:layout_marginTop="@dimen/margin_small"
+        >
+        <com.google.android.material.chip.Chip
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            />
+        <com.google.android.material.chip.Chip
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            />
+        <com.google.android.material.chip.Chip
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            />
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="100">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnClick />
+        <OnSwipe
+            motion:maxAcceleration="0.98"
+            motion:touchAnchorId="@+id/scrollView"
+            motion:dragDirection="dragUp" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="75dp"
+            android:layout_marginTop="@dimen/margin_default"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_width="75dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/profile_user_avatar"
+            android:layout_marginStart="@dimen/margin_default" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/profile_username"
+            motion:layout_constraintTop_toTopOf="@+id/profile_user_avatar"
+            motion:layout_constraintStart_toEndOf="@+id/profile_user_avatar"
+            android:layout_marginStart="@dimen/margin_default" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_width="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/profile_username"
+            android:id="@+id/profile_full_name"
+            motion:layout_constraintStart_toEndOf="@+id/profile_user_avatar"
+            android:layout_marginStart="@dimen/margin_default" />
+        <Constraint
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/profile_full_name"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default" />
+        <Constraint
+            android:id="@+id/profile_bg"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:alpha="0" />
+    </ConstraintSet>
+</MotionScene>

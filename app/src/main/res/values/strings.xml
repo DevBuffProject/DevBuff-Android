@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">DevBuff</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="explore">Explore</string>
+    <string name="my">My</string>
+    <string name="create_new">New</string>
+    <string name="settings">Settings</string>
+    <string name="cd_idea_post_owner">cd_idea_post_owner</string>
+    <string name="default_description_text">DevBuff - это площадка где разработчики разных специальностей могут находить друг друга и создавать проекты совместно</string>
+    <string name="technologies">Техногогии в проекте</string>
+    <string name="programming_languages">Языки программирования</string>
+    <string name="default_name">Alexander Chapchuk</string>
+    <string name="default_username">\@BigTows</string>
+    <string name="default_idea_title">DevBuff</string>
+    <string name="specialists">Специалисты</string>
+    <string name="cd_notification">cd_notification</string>
+    <string name="cd_github_icon">cd_github_icon</string>
+    <string name="sign_in_via_github">Войти с GitHub</string>
+    <string name="redirect_uri">devbuff://callback/GitHub</string>
+    <string name="api_endpoint_guthub_auth">https://api-staging.devbuff.com/oAuth/external/init/GITHUB/client/app</string>
+    <string name="github_loading_text">Авторизовываемся через Github…</string>
+    <string name="guest_login_subtitle">Войдите в аккаунт и получите возможность учавствовать в проектах, или создавать свои</string>
+    <string name="view_more">Подробнее</string>
+    <string name="cd_user_profile_avatar">user profile avatar</string>
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur id risus id porttitor. Donec dictum ligula et nibh volutpat vulputate nec eu nisi. Nullam vitae iaculis magna. Sed vitae turpis et dui bibendum ultrices. Duis rutrum quis risus id rutrum. Etiam pretium gravida ultrices. Suspendisse potenti. Mauris dictum lacinia ligula semper scelerisque. Mauris sed quam nisi. Etiam at felis in neque imperdiet aliquet non eu justo. Sed sodales lorem tortor, non feugiat neque sollicitudin at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque faucibus sem in tortor auctor, at hendrerit enim euismod. Vivamus quis placerat est. In laoreet nulla ornare semper laoreet. Donec et accumsan turpis. Duis lacus nibh, blandit ut elementum a, auctor at lorem. Nunc ultrices sapien eget lacus luctus, eu placerat ante pellentesque. Phasellus vulputate, dolor eget sagittis imperdiet, augue nibh sodales mauris, a viverra massa mauris vel lacus. Etiam ornare massa diam, a lacinia enim bibendum et. Praesent enim tortor, venenatis in maximus sit amet, blandit ut risus. Pellentesque vitae venenatis leo, at vestibulum dui. Ut mi leo, convallis eu erat sed, blandit euismod tortor. Phasellus eu pulvinar nisi. Nulla vulputate ex in justo consequat, eget faucibus tortor rutrum. Integer vestibulum tellus mi, eleifend dapibus metus pellentesque ut. In vulputate hendrerit semper. Suspendisse potenti. Nam iaculis ex leo, sit amet lobortis lectus pellentesque vitae. Duis lacinia laoreet mauris. Etiam convallis lacus nulla, ac auctor tellus semper vel. Sed sed sem consequat, vulputate odio sit amet, efficitur mauris. Cras malesuada gravida cursus. Sed fringilla vehicula augue, vitae fringilla lectus facilisis eget. Mauris vitae sapien a nisl volutpat pretium. Suspendisse in nisl porttitor, tempus nisi id, lacinia mauris. Suspendisse mattis justo mauris, imperdiet faucibus urna sollicitudin id. In semper purus eu quam auctor consectetur. Nulla vitae suscipit elit. Donec dictum sodales tellus, euismod ultrices dolor aliquam sit amet. Vivamus vel erat dolor. Nam lobortis eget enim id porttitor. Sed sagittis ut ipsum id maximus. Praesent cursus ex elit, sit amet finibus nisl tincidunt quis. Praesent id sagittis augue. Nullam suscipit neque a convallis lacinia. Quisque consequat nibh eget elementum mollis. Nunc quis magna ut urna dictum elementum. Nam suscipit mauris et nisl consequat semper. Morbi feugiat gravida ex in semper. Vestibulum ligula enim, efficitur at est vitae, hendrerit venenatis magna. Sed ac aliquam ipsum, nec elementum metus. Quisque pharetra elit turpis, id tincidunt dolor imperdiet sed. Aliquam ultricies ipsum ac dui pretium, sed scelerisque nibh porttitor</string>
+    <string name="lorem_small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla efficitur id risus id porttitor. Donec dictum ligula et nibh volutpat vulputate nec eu nisi</string>
+
+    <string name="username_prefix">\@%s</string>
+    <string name="cd_profile_background">profile background</string>
+    <string name="profile_about">О себе</string>
+    <string name="cd_author_avatar_default">idea details author profile image</string>
+    <string name="last_update">Последнее обновление</string>
+    <string name="status">Статус</string>
+
+    <string name="just_now">Только что</string>
+    <string name="minutes_later">%s минут назад</string>
+    <string name="hours_later">%s часов назад</string>
+    <string name="days_later">%s дней назад</string>
+
+    <string name="waiting_full_team">Идет набор в команду</string>
+    <string name="published">Опубликована</string>
+    <string name="ellipsize">...</string>
+
+
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="profileData"
+            type="com.github.bgrebennikov.devbuff.data.remote.models.user.UserProfileModel" />
+
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layoutDescription="@xml/fragment_settings_scene"
+        tools:context=".presentation.ui.fragments.SettingsFragment">
+
+        <ImageView
+            android:id="@+id/profile_bg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:alpha=".25"
+            android:contentDescription="@string/cd_profile_background"
+            android:scaleType="centerCrop"
+            android:src="@raw/profile_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/profile_user_avatar"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="@dimen/margin_default"
+            android:adjustViewBounds="true"
+            android:background="@drawable/bg_profile_rounded"
+            android:contentDescription="@string/cd_user_profile_avatar"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:profileImageFromUserID="@{profileData.id}"
+            tools:src="@raw/sample_avatar" />
+
+        <TextView
+            android:id="@+id/profile_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintEnd_toEndOf="@+id/profile_user_avatar"
+            app:layout_constraintStart_toStartOf="@+id/profile_user_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/profile_user_avatar"
+            app:username="@{profileData.username}"
+            tools:text="\@Username" />
+
+        <TextView
+            android:id="@+id/profile_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/profile_user_avatar"
+            app:layout_constraintStart_toStartOf="@+id/profile_user_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/profile_username"
+            tools:text="Boris Grebennikov"
+            app:firstName="@{profileData.firstName}"
+            app:lastName="@{profileData.lastName}"
+            />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:background="@drawable/bg_rect_rounded_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_full_name"
+            tools:layout_editor_absoluteX="12dp"
+            android:orientation="vertical"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/padding_default"
+                android:paddingStart="@dimen/padding_default"
+                android:paddingEnd="@dimen/padding_default"
+                >
+
+                <TextView
+                    android:id="@+id/profile_about_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_about"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/lorem_small"
+                    android:text="@{profileData.bio}"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_about_title"
+                    tools:layout_editor_absoluteX="12dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

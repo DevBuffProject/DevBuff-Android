@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="idea"
+            type="com.github.bgrebennikov.devbuff.data.local.SimpleIdeaModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_default"
+        android:background="@drawable/bg_rect_rounded_white"
+        android:padding="@dimen/padding_default">
+
+        <!--  TODO: Remove sample author image  -->
+        <ImageView
+            android:id="@+id/ownerPhoto"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/cd_idea_post_owner"
+            android:scaleType="centerCrop"
+            tools:src="@raw/sample_image"
+            app:profileImageFromUserID="@{idea.ownerIdea.id}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ownerFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            tools:text="Alexander Chapchuk"
+            app:firstName="@{idea.ownerIdea.firstName}"
+            app:lastName="@{idea.ownerIdea.lastName}"
+            android:textColor="@color/black"
+            android:textSize="6pt"
+            app:layout_constraintBottom_toBottomOf="@+id/ownerPhoto"
+            app:layout_constraintStart_toEndOf="@+id/ownerPhoto"
+            app:layout_constraintTop_toTopOf="@+id/ownerPhoto" />
+
+        <TextView
+            android:id="@+id/ownerUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            tools:text="\@BigTows"
+            app:username="@{idea.ownerIdea.username}"
+            app:layout_constraintBottom_toBottomOf="@+id/ownerPhoto"
+            app:layout_constraintStart_toEndOf="@id/ownerFullName"
+            app:layout_constraintTop_toTopOf="@+id/ownerPhoto" />
+
+        <TextView
+            android:id="@+id/ideaTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            tools:text="DevBuff"
+            android:text="@{idea.name}"
+            android:textColor="@color/black"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ownerPhoto" />
+
+        <TextView
+            android:id="@+id/ideaDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            tools:text="@string/default_description_text"
+            android:text="@{idea.description}"
+            android:textSize="6pt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ideaTitle" />
+
+        <TextView
+            android:id="@+id/specialists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/specialists"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ideaDescription" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/specialists_chip_recycler"
+            android:layoutDirection="ltr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specialists"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            android:orientation="horizontal"
+            tools:itemCount="3"
+            tools:listitem="@layout/idea_chip_item" />
+
+
+        <TextView
+            android:id="@+id/technologies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/technologies"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specialists_chip_recycler" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/technologies_chip_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/technologies"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            android:orientation="horizontal"
+            tools:itemCount="3"
+            tools:listitem="@layout/idea_chip_item">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/languages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/programming_languages"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/technologies_chip_recycler" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/languages_chip_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/languages"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            android:orientation="horizontal"
+            tools:itemCount="3"
+            tools:listitem="@layout/idea_chip_item" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/BtnIdeaShowMore"
+            android:id="@+id/view_more_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/languages_chip_recycler"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/view_more" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
