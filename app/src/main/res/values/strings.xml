@@ -12,7 +12,7 @@
     <string name="programming_languages">Языки программирования</string>
     <string name="default_name">Alexander Chapchuk</string>
     <string name="default_username">\@BigTows</string>
-    <string name="default_idea_title">DevBuff</string>
+    <string name="default_idea_title">Reaction Alpha</string>
     <string name="specialists">Специалисты</string>
     <string name="cd_notification">cd_notification</string>
     <string name="cd_github_icon">cd_github_icon</string>
@@ -41,7 +41,13 @@
 
     <string name="waiting_full_team">Идет набор в команду</string>
     <string name="published">Опубликована</string>
-    <string name="ellipsize">...</string>
+    <string name="ellipsize">…</string>
+    <string name="update_date_demo">Обновлено: 7 марта</string>
+    <string name="invite_specialists">Приглашаем специалистов</string>
+    <string name="stack_of_languages">Стэк языков</string>
+    <string name="technologies_stack_title">Стэк технологий</string>
+    <string name="already_joined_title">Уже в проекте:</string>
+    <string name="idea_join_to_team_btn">Откликнуться</string>
 
 
 </resources>

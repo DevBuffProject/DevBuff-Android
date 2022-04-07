@@ -1,13 +1,13 @@
-package com.github.bgrebennikov.devbuff.data.local
+package com.github.bgrebennikov.devbuff.data.local.explore
 
 import android.os.Parcelable
 import com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore.ListItem
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class SimpleLanguagesModel(
+data class MappedIdeaRequirements(
     val name: String
-) : ListItem, Parcelable {
+): ListItem, Parcelable {
     override val itemId: Int
-        get() = name.hashCode()
+        get() = this.name.hashCode()
 }

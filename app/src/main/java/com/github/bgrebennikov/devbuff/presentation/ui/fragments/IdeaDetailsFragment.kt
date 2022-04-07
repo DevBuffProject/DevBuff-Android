@@ -4,12 +4,13 @@ import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.github.bgrebennikov.devbuff.common.TAG
-import com.github.bgrebennikov.devbuff.data.local.Status
+import com.github.bgrebennikov.devbuff.data.local.explore.Status
 import com.github.bgrebennikov.devbuff.databinding.FragmentIdeaDetailsBinding
+import com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore.ideaDetails.IdeaSpecialistsAdapter
 import com.github.bgrebennikov.devbuff.presentation.ui.fragments.base.BaseFragment
-import com.github.bgrebennikov.devbuff.presentation.ui.fragments.base.utils.setTextFromHtml
 import com.github.bgrebennikov.devbuff.presentation.viewModels.ExploreViewModel
 
 class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
@@ -26,6 +27,8 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
         viewModelFactory.create(ExploreViewModel::class.java)
     }
 
+    private val adapterSpecialists = IdeaSpecialistsAdapter()
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         component.inject(this)
@@ -38,6 +41,10 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
         binding.alreadyLoadedInfo = ideaInfo
         Log.i(TAG, "onViewCreated: $ideaInfo")
 
+        with(binding.ideaSpecialistsList){
+            adapter = adapterSpecialists
+        }
+
         viewModel.loadSingleIdea(ideaInfo.id).observe(viewLifecycleOwner){
             it.let { apiResponse ->
                 when(apiResponse.status){
@@ -47,9 +54,9 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
                     }
 
                     Status.SUCCESS -> apiResponse.data?.let { idea ->
-                        binding.ideaBody.setTextFromHtml(idea.body)
                         binding.isLoading = false
                         binding.ideaInfo = idea
+                        adapterSpecialists.items = idea.specialist
                     }
 
                     Status.ERROR -> apiResponse.message?.let { error ->
@@ -61,7 +68,17 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
             }
         }
 
+        initAppbar()
+
 
     }
+
+
+    private fun initAppbar(){
+        binding.backIcon.setOnClickListener {
+            findNavController().popBackStack()
+        }
+    }
+
 
 }

@@ -93,6 +93,7 @@
                 android:paddingTop="@dimen/padding_default"
                 android:paddingStart="@dimen/padding_default"
                 android:paddingEnd="@dimen/padding_default"
+
                 >
 
                 <TextView

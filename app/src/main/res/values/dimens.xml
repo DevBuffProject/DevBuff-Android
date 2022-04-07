@@ -11,7 +11,12 @@
     <dimen name="zero">0dp</dimen>
     <dimen name="padding_chip">8dp</dimen>
 
+    <dimen name="profile_image_small">65dp</dimen>
     <dimen name="profile_image_size">130dp</dimen>
     <dimen name="idea_profile_image_large">50dp</dimen>
+
+    <dimen name="text_size_default">11sp</dimen>
+    <dimen name="text_size_large">28sp</dimen>
+
 
 </resources>

@@ -1,5 +1,7 @@
-package com.github.bgrebennikov.devbuff.data.remote.models.explore
+package com.github.bgrebennikov.devbuff.data.remote.models.explore.ideaDetails
 
+import com.github.bgrebennikov.devbuff.data.remote.models.explore.IdeaStatus
+import com.github.bgrebennikov.devbuff.data.remote.models.explore.OwnerIdea
 import com.google.gson.annotations.SerializedName
 
 data class IdeaDetailsModel(
@@ -19,5 +21,9 @@ data class IdeaDetailsModel(
     val description: String,
 
     @SerializedName("text")
-    val body : String
-    )
+    val body : String,
+
+    @SerializedName("specialist")
+    val specialist : List<IdeaDetailsSpecialists>
+)
+

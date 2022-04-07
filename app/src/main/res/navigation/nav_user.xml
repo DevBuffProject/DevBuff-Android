@@ -39,6 +39,6 @@
             app:destination="@id/exploreFragment" />
         <argument
             android:name="ideaInfo"
-            app:argType="com.github.bgrebennikov.devbuff.data.local.SimpleIdeaModel" />
+            app:argType="com.github.bgrebennikov.devbuff.data.local.explore.MappedIdeaModel" />
     </fragment>
 </navigation>

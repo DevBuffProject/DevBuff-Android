@@ -6,7 +6,7 @@
     <data>
         <variable
             name="idea"
-            type="com.github.bgrebennikov.devbuff.data.local.SimpleIdeaModel" />
+            type="com.github.bgrebennikov.devbuff.data.local.explore.MappedIdeaModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

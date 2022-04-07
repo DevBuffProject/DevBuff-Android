@@ -31,21 +31,10 @@ class MainActivity : BaseActivity(){
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val appBarConfig = AppBarConfiguration(
-            setOf(
-                R.id.exploreFragment,
-                R.id.myIdeasFragment,
-                R.id.newIdeaFragment,
-                R.id.settingsFragment
-                )
-        )
 
         val navController = navHostFragment.navController
         NavigationUI.setupWithNavController(binding.bottomNavigationView, navController)
 
-
-        setSupportActionBar(binding.mainToolbar)
-        setupActionBarWithNavController(navController, appBarConfig)
 
         userViewModel.loadUser()
 

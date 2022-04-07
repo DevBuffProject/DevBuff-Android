@@ -17,7 +17,6 @@
         android:id="@+id/chip"
         tools:text="Category"
         android:text="@{title}"
-        android:backgroundTint="@{title.hashCode()}"
         >
 
 

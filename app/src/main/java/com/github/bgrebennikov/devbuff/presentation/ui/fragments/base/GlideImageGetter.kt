@@ -21,12 +21,13 @@ import java.lang.ref.WeakReference
 
 class GlideImageGetter(
     textView: TextView,
+    val textViewPadding: Int,
     private val density: Float = textView.resources.displayMetrics.density
 ) : Html.ImageGetter {
 
     private val container: WeakReference<TextView> = WeakReference(textView)
 
-    override fun getDrawable(source: String): Drawable {
+    override fun getDrawable(source: String?): Drawable? {
 
         val drawable = BitmapDrawablePlaceholder()
 
@@ -38,11 +39,6 @@ class GlideImageGetter(
                         .asBitmap()
                         .diskCacheStrategy(DiskCacheStrategy.NONE)
                         .load(Uri.parse(source))
-                        .into(drawable)
-                }.getOrElse {
-                    Glide.with(context)
-                        .asBitmap()
-                        .load(AppCompatResources.getDrawable(context, R.drawable.bg_gradient))
                         .into(drawable)
                 }
             }
@@ -68,7 +64,7 @@ class GlideImageGetter(
                 val drawableWidth = width ?: (drawable.intrinsicWidth / 3 * density).toInt()
                 val drawableHeight = height ?: (drawable.intrinsicHeight / 3 * density).toInt()
 
-                val maxWidth = container.get()?.measuredWidth ?: 0
+                val maxWidth = container.get()?.measuredWidth?.minus(textViewPadding) ?: 0
 
                 if (drawableWidth > maxWidth) {
                     val calculatedHeight = maxWidth * drawableHeight / drawableWidth
