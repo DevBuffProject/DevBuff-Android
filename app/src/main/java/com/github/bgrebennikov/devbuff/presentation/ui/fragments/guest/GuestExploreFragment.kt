@@ -2,8 +2,8 @@ package com.github.bgrebennikov.devbuff.presentation.ui.fragments.guest
 
 import android.content.Context
 import android.widget.Toast
-import com.github.bgrebennikov.devbuff.data.local.SimpleIdeaModel
-import com.github.bgrebennikov.devbuff.data.local.Status
+import com.github.bgrebennikov.devbuff.data.local.explore.MappedIdeaModel
+import com.github.bgrebennikov.devbuff.data.local.explore.Status
 import com.github.bgrebennikov.devbuff.databinding.FragmentGuestExploreBinding
 import com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore.ExploreAdapter
 import com.github.bgrebennikov.devbuff.presentation.ui.fragments.base.BaseFragment
@@ -39,7 +39,7 @@ class GuestExploreFragment : BaseFragment<FragmentGuestExploreBinding>(
         }
 
         adapter.listener = object : ExploreClickListener {
-            override fun onClickIdeaItem(idea: SimpleIdeaModel) {
+            override fun onClickIdeaItem(idea: MappedIdeaModel) {
                 Toast.makeText(context, "Guest: ${idea.name}", Toast.LENGTH_LONG).show()
             }
 

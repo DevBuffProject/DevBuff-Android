@@ -1,7 +1,7 @@
 package com.github.bgrebennikov.devbuff.data.remote
 
 import com.github.bgrebennikov.devbuff.data.remote.models.auth.AuthConfig
-import com.github.bgrebennikov.devbuff.data.remote.models.explore.IdeaDetailsModel
+import com.github.bgrebennikov.devbuff.data.remote.models.explore.ideaDetails.IdeaDetailsModel
 import com.github.bgrebennikov.devbuff.data.remote.models.explore.IdeasResponse
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -10,7 +10,7 @@ import retrofit2.http.Query
 
 interface ApiService {
 
-    @GET("idea/?sortBy=lastUpdate")
+    @GET("idea/?sortBy=LAST_UPDATE")
     suspend fun getIdeas(
         @Query("page") page: Int
     ): IdeasResponse

@@ -2,26 +2,18 @@ package com.github.bgrebennikov.devbuff.presentation.ui.fragments
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.github.bgrebennikov.devbuff.R
-import com.github.bgrebennikov.devbuff.common.TAG
-import com.github.bgrebennikov.devbuff.data.local.SimpleIdeaModel
-import com.github.bgrebennikov.devbuff.data.local.Status
+import com.github.bgrebennikov.devbuff.data.local.explore.MappedIdeaModel
+import com.github.bgrebennikov.devbuff.data.local.explore.Status
 import com.github.bgrebennikov.devbuff.databinding.FragmentExploreBinding
 import com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore.ExploreAdapter
-import com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore.HeaderItemModel
-import com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore.ListItem
 import com.github.bgrebennikov.devbuff.presentation.ui.fragments.base.BaseFragment
 import com.github.bgrebennikov.devbuff.presentation.ui.fragments.base.ExploreClickListener
 import com.github.bgrebennikov.devbuff.presentation.viewModels.ExploreViewModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 class ExploreFragment : BaseFragment<FragmentExploreBinding>(FragmentExploreBinding::inflate) {
 
@@ -73,7 +65,7 @@ class ExploreFragment : BaseFragment<FragmentExploreBinding>(FragmentExploreBind
 
 
         adapter.listener = object : ExploreClickListener{
-            override fun onClickIdeaItem(idea: SimpleIdeaModel) {
+            override fun onClickIdeaItem(idea: MappedIdeaModel) {
                 findNavController()
                     .navigate(
                         ExploreFragmentDirections.actionExploreFragmentToIdeaDetailsFragment(idea)

@@ -3,15 +3,12 @@ package com.github.bgrebennikov.devbuff.network
 import android.app.Application
 import android.content.Intent
 import android.util.Log
-import androidx.datastore.preferences.core.edit
 import com.github.bgrebennikov.devbuff.common.AUTHORIZATION_HEADER
 import com.github.bgrebennikov.devbuff.common.ServerErrorCodes
 import com.github.bgrebennikov.devbuff.common.TAG
 import com.github.bgrebennikov.devbuff.data.dataStore.DataStoreHelper
-import com.github.bgrebennikov.devbuff.data.local.Status
-import com.github.bgrebennikov.devbuff.data.remote.UserApiService
+import com.github.bgrebennikov.devbuff.data.local.explore.Status
 import com.github.bgrebennikov.devbuff.domain.TokenServiceRepository
-import com.github.bgrebennikov.devbuff.domain.user.UserRemoteRepository
 import com.github.bgrebennikov.devbuff.presentation.ui.GuestActivity
 import kotlinx.coroutines.runBlocking
 import okhttp3.Interceptor

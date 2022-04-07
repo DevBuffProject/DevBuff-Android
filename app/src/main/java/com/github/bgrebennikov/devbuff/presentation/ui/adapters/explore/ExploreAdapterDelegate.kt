@@ -3,10 +3,10 @@ package com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore
 import android.app.Activity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.github.bgrebennikov.devbuff.data.local.SimpleIdeaModel
-import com.github.bgrebennikov.devbuff.data.local.SimpleIdeaRequirements
-import com.github.bgrebennikov.devbuff.data.local.SimpleLanguagesModel
-import com.github.bgrebennikov.devbuff.data.local.SimpleTechnologiesModel
+import com.github.bgrebennikov.devbuff.data.local.explore.MappedIdeaModel
+import com.github.bgrebennikov.devbuff.data.local.explore.MappedIdeaRequirements
+import com.github.bgrebennikov.devbuff.data.local.explore.MappedLanguagesModel
+import com.github.bgrebennikov.devbuff.data.local.explore.MappedTechnologiesModel
 import com.github.bgrebennikov.devbuff.databinding.HeaderTitleItemBinding
 import com.github.bgrebennikov.devbuff.databinding.IdeaChipItemBinding
 import com.github.bgrebennikov.devbuff.databinding.ItemIdeaBinding
@@ -16,8 +16,8 @@ import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 object ExploreAdapterDelegate {
 
 
-    fun ideaPostDelegate(onClickListener: (SimpleIdeaModel) -> Unit) =
-        adapterDelegateViewBinding<SimpleIdeaModel, ListItem, ItemIdeaBinding>(
+    fun ideaPostDelegate(onClickListener: (MappedIdeaModel) -> Unit) =
+        adapterDelegateViewBinding<MappedIdeaModel, ListItem, ItemIdeaBinding>(
             { inflater, container ->
                 ItemIdeaBinding.inflate(inflater, container, false)
             }
@@ -88,7 +88,7 @@ object ExploreAdapterDelegate {
         }
     }
 
-    fun ideaChipItem() = adapterDelegateViewBinding<SimpleIdeaRequirements, ListItem, IdeaChipItemBinding>(
+    fun ideaChipItem() = adapterDelegateViewBinding<MappedIdeaRequirements, ListItem, IdeaChipItemBinding>(
         { inflater, container ->
             IdeaChipItemBinding.inflate(inflater, container, false)
         }
@@ -100,7 +100,7 @@ object ExploreAdapterDelegate {
         }
     }
 
-    fun ideaChipLanguagesItem() = adapterDelegateViewBinding<SimpleLanguagesModel, ListItem, IdeaChipItemBinding>(
+    fun ideaChipLanguagesItem() = adapterDelegateViewBinding<MappedLanguagesModel, ListItem, IdeaChipItemBinding>(
         { inflater, container ->
             IdeaChipItemBinding.inflate(inflater, container, false)
         }
@@ -111,7 +111,7 @@ object ExploreAdapterDelegate {
         }
     }
 
-    fun ideaChipTechnologiesItem() = adapterDelegateViewBinding<SimpleTechnologiesModel, ListItem, IdeaChipItemBinding>(
+    fun ideaChipTechnologiesItem() = adapterDelegateViewBinding<MappedTechnologiesModel, ListItem, IdeaChipItemBinding>(
         { inflater, container ->
             IdeaChipItemBinding.inflate(inflater, container, false)
         }

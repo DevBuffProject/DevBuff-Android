@@ -2,16 +2,9 @@ package com.github.bgrebennikov.devbuff.presentation.ui.fragments
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import com.github.bgrebennikov.devbuff.R
-import com.github.bgrebennikov.devbuff.common.STAGED_BASE_IMAGE_URL
-import com.github.bgrebennikov.devbuff.common.TAG
-import com.github.bgrebennikov.devbuff.data.local.Status
+import com.github.bgrebennikov.devbuff.data.local.explore.Status
 import com.github.bgrebennikov.devbuff.databinding.FragmentSettingsBinding
 import com.github.bgrebennikov.devbuff.presentation.ui.fragments.base.BaseFragment
 import com.github.bgrebennikov.devbuff.presentation.viewModels.UserViewModel

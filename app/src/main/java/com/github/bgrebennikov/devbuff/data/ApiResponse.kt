@@ -1,7 +1,6 @@
 package com.github.bgrebennikov.devbuff.data
 
-import com.github.bgrebennikov.devbuff.data.local.Status
-import com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore.ListItem
+import com.github.bgrebennikov.devbuff.data.local.explore.Status
 
 data class ApiResponse<out T>(
     val status : Status,

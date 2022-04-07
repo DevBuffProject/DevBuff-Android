@@ -5,19 +5,17 @@ import androidx.lifecycle.*
 import com.github.bgrebennikov.devbuff.common.TAG
 import com.github.bgrebennikov.devbuff.data.ApiResponse
 import com.github.bgrebennikov.devbuff.data.dataStore.DataStoreHelper
-import com.github.bgrebennikov.devbuff.data.local.Status
-import com.github.bgrebennikov.devbuff.data.remote.models.explore.IdeaDetailsModel
+import com.github.bgrebennikov.devbuff.data.local.explore.ideaDetails.MappedIdeaDetailsModel
+import com.github.bgrebennikov.devbuff.data.remote.models.explore.ideaDetails.IdeaDetailsModel
 import com.github.bgrebennikov.devbuff.domain.useCases.GetIdeaByIdUseCase
 import com.github.bgrebennikov.devbuff.domain.useCases.GetIdeasUseCase
 import com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore.HeaderItemModel
 import com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore.IdeaPostProgress
 import com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore.ListItem
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import javax.inject.Singleton
-import kotlin.random.Random
 
 @Singleton
 class ExploreViewModel @Inject constructor(
@@ -30,8 +28,8 @@ class ExploreViewModel @Inject constructor(
     val ideas : LiveData<ApiResponse<List<ListItem>>> get() = _ideas
 
 
-    private val _singleIdea = MutableLiveData<ApiResponse<IdeaDetailsModel>>()
-    val singleIdea : LiveData<ApiResponse<IdeaDetailsModel>> get() = _singleIdea
+    private val _singleIdea = MutableLiveData<ApiResponse<MappedIdeaDetailsModel>>()
+    val singleIdea : LiveData<ApiResponse<MappedIdeaDetailsModel>> get() = _singleIdea
 
     init {
 
