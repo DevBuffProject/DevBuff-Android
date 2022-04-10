@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        app:layoutDescription="@xml/fragment_idea_details_xml_constraintlayout3_scene5"
+        app:layoutDescription="@xml/fragment_idea_details_xml_scene"
         tools:context=".presentation.ui.fragments.IdeaDetailsFragment">
 
         <View
