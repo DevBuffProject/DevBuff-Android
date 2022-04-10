@@ -14,27 +14,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="178febb5-0f2f-46e0-832a-2c4941d73985" name="Default Changelist" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/local/explore/ideaDetails/MappedIdeaDetailsModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/local/explore/ideaDetails/MappedIdeaFrameworks.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/local/explore/ideaDetails/MappedIdeaSpecialists.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/local/explore/ideaDetails/MappedIdeaSpecialistsLanguages.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/remote/models/explore/ideaDetails/IdeaDetailsFrameworks.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/remote/models/explore/ideaDetails/IdeaDetailsLanguages.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/remote/models/explore/ideaDetails/IdeaDetailsSpecialists.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/adapters/explore/ideaDetails/IdeaDetailsDelegate.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/adapters/explore/ideaDetails/IdeaSpecialistsAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_idea_join_team.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bg_rounded_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_back.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_waiting_for_team.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/idea_specialist_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/fragment_idea_details_xml_constraintlayout3_scene.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/fragment_idea_details_xml_constraintlayout3_scene2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/fragment_idea_details_xml_constraintlayout3_scene3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/fragment_idea_details_xml_constraintlayout3_scene4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/fragment_idea_details_xml_constraintlayout3_scene5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/fragment_idea_details_xml_ideaheader_scene.xml" afterDir="false" />
+    <list default="true" id="178febb5-0f2f-46e0-832a-2c4941d73985" name="Default Changelist" comment="Redesign of Idea Details Fragment">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/common/extensions/AppBarExtension.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/customViews/AppbarIdeaDetails.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/appbar_idea_details.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
@@ -42,50 +26,16 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/ApiResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/ApiResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/local/SimpleIdeaModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/local/explore/MappedIdeaModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/local/SimpleIdeaRequirements.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/local/explore/MappedIdeaRequirements.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/local/SimpleLanguagesModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/local/explore/MappedLanguagesModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/local/SimpleTechnologiesModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/local/explore/MappedTechnologiesModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/local/Status.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/local/explore/Status.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/mappers/MapperIdeas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/mappers/MapperIdeas.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/remote/ApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/remote/ApiService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/remote/models/explore/IdeaDetailsModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/data/remote/models/explore/ideaDetails/IdeaDetailsModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/domain/Repository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/domain/Repository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/domain/RepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/domain/RepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/domain/useCases/GetIdeaByIdUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/domain/useCases/GetIdeaByIdUseCase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/domain/useCases/GetIdeasUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/domain/useCases/GetIdeasUseCase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/network/UserServiceInterceptor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/network/UserServiceInterceptor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/adapters/binding/IdeaDetailsBindingAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/adapters/binding/IdeaDetailsBindingAdapter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/adapters/binding/ProfileBindingAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/adapters/binding/ProfileBindingAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/adapters/explore/ChipsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/adapters/explore/ChipsAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/adapters/explore/ExploreAdapterDelegate.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/adapters/explore/ExploreAdapterDelegate.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/adapters/explore/ListItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/adapters/explore/ListItem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/ExploreFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/ExploreFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/IdeaDetailsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/IdeaDetailsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/SettingsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/SettingsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/base/ExploreClickListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/base/ExploreClickListener.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/base/GlideImageGetter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/base/GlideImageGetter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/base/utils/TextViewFromHtml.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/base/utils/TextViewFromHtml.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/guest/GuestExploreFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/fragments/guest/GuestExploreFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/viewModels/ExploreViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/viewModels/ExploreViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_idea_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_idea_details.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/idea_chip_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/idea_chip_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_idea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_user.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/fragment_idea_details_xml_constraintlayout3_scene.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/fragment_idea_details_xml_constraintlayout3_scene2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/fragment_idea_details_xml_constraintlayout3_scene3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/fragment_idea_details_xml_constraintlayout3_scene4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/fragment_idea_details_xml_ideaheader_scene.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,23 +81,23 @@
       <list>
         <option value="Kotlin Object" />
         <option value="Kotlin Annotation" />
-        <option value="valueResourceFile" />
         <option value="Kotlin Sealed Class" />
         <option value="Kotlin File" />
         <option value="Kotlin Enum" />
         <option value="navigationResourceFile" />
-        <option value="layoutResourceFile" />
         <option value="resourceFile" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Data Class" />
+        <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
+        <option value="valueResourceFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="extensions" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -183,6 +133,8 @@
     <property name="android-custom-view/home/boris/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.2.1/f0f93e67af3f7417bdd560d5142f6dec4fe629c3/recyclerview-1.2.1-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="android-custom-view/home/boris/AndroidStudioProjects/DevBuff/app/src/main/java/com/github/bgrebennikov/devbuff/common/CustomToolbar.kt_CustomToolbar_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-view/home/boris/AndroidStudioProjects/DevBuff/app/src/main/java/com/github/bgrebennikov/devbuff/common/CustomToolbar.kt_SELECTED" value="CustomToolbar" />
+    <property name="android-custom-view/home/boris/AndroidStudioProjects/DevBuff/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/customViews/AppbarIdeaDetails.kt_AppbarIdeaDetails_DIMENSIONS" value="1080&#10;1920" />
+    <property name="android-custom-view/home/boris/AndroidStudioProjects/DevBuff/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/customViews/AppbarIdeaDetails.kt_SELECTED" value="AppbarIdeaDetails" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -466,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648403897462</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Redesign of Idea Details Fragment">
+      <created>1649327566267</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1649327566267</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -549,6 +508,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Redesign of Idea Details Fragment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redesign of Idea Details Fragment" />
   </component>
 </project>

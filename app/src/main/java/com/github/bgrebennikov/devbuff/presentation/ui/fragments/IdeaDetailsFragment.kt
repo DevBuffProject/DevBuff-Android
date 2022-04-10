@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.github.bgrebennikov.devbuff.common.TAG
@@ -68,17 +69,15 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
             }
         }
 
-        initAppbar()
-
-
-    }
-
-
-    private fun initAppbar(){
-        binding.backIcon.setOnClickListener {
+        binding.appBar.onBackPressed {
             findNavController().popBackStack()
         }
+
+
     }
+
+
+
 
 
 }
