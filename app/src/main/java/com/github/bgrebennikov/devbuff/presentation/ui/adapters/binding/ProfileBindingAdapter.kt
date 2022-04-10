@@ -11,6 +11,7 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
 import com.github.bgrebennikov.devbuff.R
 import com.github.bgrebennikov.devbuff.common.STAGED_BASE_IMAGE_URL
+import com.github.bgrebennikov.devbuff.presentation.ui.customViews.AppbarIdeaDetails
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 
@@ -49,6 +50,15 @@ fun setUsername(textView: TextView, username: String?){
         text = context.getString(R.string.username_prefix).format(username)
     }
 
+}
+
+@BindingAdapter("appbarUsername")
+fun setAppbarUsername(appbar: AppbarIdeaDetails, username: String?){
+    username?.let {
+        appbar.setSubtitle(
+            "@%s".format(it)
+        )
+    }
 }
 
 @BindingAdapter(
