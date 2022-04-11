@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/gray_light"
     android:fitsSystemWindows="true"
-    tools:context=".presentation.ui.fragments.guest.GuestExploreFragment">
+    tools:context=".presentation.ui.fragments.ExploreFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/ideasListRecycler"

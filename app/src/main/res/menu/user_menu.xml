@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/exploreFragment"
+        android:id="@+id/nav_user_explore"
         android:title="@string/explore"
         android:icon="@drawable/ic_explore"
         />
 
     <item
-        android:id="@+id/myIdeasFragment"
+        android:id="@+id/nav_user_my_ideas"
         android:title="@string/my"
         android:icon="@drawable/ic_my"
         />
 
     <item
-        android:id="@+id/newIdeaFragment"
+        android:id="@+id/nav_user_new_idea"
         android:title="@string/create_new"
         android:icon="@drawable/ic_resource_new"
         />
 
     <item
-        android:id="@+id/settingsFragment"
+        android:id="@+id/nav_user_settings"
         android:title="@string/settings"
         android:icon="@drawable/ic_settings"
         />

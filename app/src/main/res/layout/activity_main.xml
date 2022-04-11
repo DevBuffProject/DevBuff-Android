@@ -10,30 +10,17 @@
 
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nav_container"
+        android:id="@+id/nav_container_root"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_user"
-        />
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:visibility="visible"
-        android:id="@+id/bottom_navigation_view"
-        style="@style/BottomNavStyle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/user_menu"
-        app:labelVisibilityMode="labeled"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_user_root"
+        tools:layout="@layout/fragment_user_base_graph"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
