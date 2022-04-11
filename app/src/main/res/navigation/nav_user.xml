@@ -3,42 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_main"
-    app:startDestination="@id/exploreFragment">
+    app:startDestination="@id/nav_user_explore">
 
-    <fragment
-        android:id="@+id/exploreFragment"
-        android:name="com.github.bgrebennikov.devbuff.presentation.ui.fragments.ExploreFragment"
-        android:label="@string/explore"
-        tools:layout="@layout/fragment_explore" >
-        <action
-            android:id="@+id/action_exploreFragment_to_ideaDetailsFragment"
-            app:destination="@id/ideaDetailsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/myIdeasFragment"
-        android:name="com.github.bgrebennikov.devbuff.presentation.ui.fragments.MyIdeasFragment"
-        android:label="fragment_my_ideas"
-        tools:layout="@layout/fragment_my_ideas" />
-    <fragment
-        android:id="@+id/newIdeaFragment"
-        android:name="com.github.bgrebennikov.devbuff.presentation.ui.fragments.NewIdeaFragment"
-        android:label="fragment_new_idea"
-        tools:layout="@layout/fragment_new_idea" />
-    <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.github.bgrebennikov.devbuff.presentation.ui.fragments.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
-    <fragment
-        android:id="@+id/ideaDetailsFragment"
-        android:name="com.github.bgrebennikov.devbuff.presentation.ui.fragments.IdeaDetailsFragment"
-        android:label="fragment_idea_details"
-        tools:layout="@layout/fragment_idea_details" >
-        <action
-            android:id="@+id/action_ideaDetailsFragment_to_exploreFragment"
-            app:destination="@id/exploreFragment" />
-        <argument
-            android:name="ideaInfo"
-            app:argType="com.github.bgrebennikov.devbuff.data.local.explore.MappedIdeaModel" />
-    </fragment>
+
+
+    <include app:graph="@navigation/nav_user_explore" />
+    <include app:graph="@navigation/nav_user_my_ideas" />
+    <include app:graph="@navigation/nav_user_new_idea" />
+    <include app:graph="@navigation/nav_user_settings" />
 </navigation>

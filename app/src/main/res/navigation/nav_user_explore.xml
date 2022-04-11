@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_user_explore"
+    app:startDestination="@id/exploreFragment">
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.github.bgrebennikov.devbuff.presentation.ui.fragments.guest.GuestExploreFragment"
+        android:label="fragment_explore"
+        tools:layout="@layout/fragment_explore" />
+
+    <fragment
+        android:id="@+id/ideaDetailsFragment"
+        android:name="com.github.bgrebennikov.devbuff.presentation.ui.fragments.IdeaDetailsFragment"
+        android:label="fragment_idea_details"
+        tools:layout="@layout/fragment_idea_details" >
+        <action
+            android:id="@+id/action_ideaDetailsFragment_to_exploreFragment"
+            app:destination="@id/exploreFragment" />
+        <argument
+            android:name="ideaInfo"
+            app:argType="com.github.bgrebennikov.devbuff.data.local.explore.MappedIdeaModel" />
+    </fragment>
+</navigation>
