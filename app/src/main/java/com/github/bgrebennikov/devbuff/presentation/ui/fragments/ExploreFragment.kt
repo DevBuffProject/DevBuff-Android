@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.github.bgrebennikov.devbuff.common.extensions.findMainNavController
 import com.github.bgrebennikov.devbuff.data.local.explore.MappedIdeaModel
 import com.github.bgrebennikov.devbuff.data.local.explore.Status
 import com.github.bgrebennikov.devbuff.databinding.FragmentExploreBinding
@@ -66,10 +67,9 @@ class ExploreFragment : BaseFragment<FragmentExploreBinding>(FragmentExploreBind
 
         adapter.listener = object : ExploreClickListener{
             override fun onClickIdeaItem(idea: MappedIdeaModel) {
-                findNavController()
-                    .navigate(
-                        ExploreFragmentDirections.actionExploreFragmentToIdeaDetailsFragment(idea)
-                    )
+                findMainNavController().navigate(
+                    ExploreFragmentDirections.actionExploreFragmentToIdeaDetailsFragment(idea)
+                )
             }
 
         }
