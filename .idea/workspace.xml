@@ -16,7 +16,7 @@
   <component name="ChangeListManager">
     <list default="true" id="178febb5-0f2f-46e0-832a-2c4941d73985" name="Default Changelist" comment="Idea Details AppBar as Custom View">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_idea_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_idea_details.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/customViews/AppbarIdeaDetails.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/bgrebennikov/devbuff/presentation/ui/customViews/AppbarIdeaDetails.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
