@@ -42,9 +42,9 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
         binding.alreadyLoadedInfo = ideaInfo
         Log.i(TAG, "onViewCreated: $ideaInfo")
 
-        with(binding.ideaSpecialistsList){
-            adapter = adapterSpecialists
-        }
+//        with(binding.ideaSpecialistsList){
+//            adapter = adapterSpecialists
+//        }
 
         viewModel.loadSingleIdea(ideaInfo.id).observe(viewLifecycleOwner){
             it.let { apiResponse ->

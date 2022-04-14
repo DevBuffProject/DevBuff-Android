@@ -6,15 +6,15 @@
         <entry key="../../../../layout/custom_preview.xml" value="0.39791666666666664" />
         <entry key="app/src/main/res/drawable/bg_idea_join_team.xml" value="0.221" />
         <entry key="app/src/main/res/drawable/bg_idea_more_btn.xml" value="0.221" />
-        <entry key="app/src/main/res/drawable/bg_rect_rounded_white.xml" value="0.369" />
+        <entry key="app/src/main/res/drawable/bg_rect_rounded_white.xml" value="0.243" />
         <entry key="app/src/main/res/drawable/bg_rounded_24.xml" value="0.3455" />
         <entry key="app/src/main/res/drawable/ic_back.xml" value="0.2885" />
         <entry key="app/src/main/res/drawable/ic_waiting_for_team.xml" value="0.3455" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2953703703703704" />
         <entry key="app/src/main/res/layout/appbar_idea_detaild.xml" value="0.36822916666666666" />
-        <entry key="app/src/main/res/layout/appbar_idea_details.xml" value="0.27037037037037037" />
+        <entry key="app/src/main/res/layout/appbar_idea_details.xml" value="0.340625" />
         <entry key="app/src/main/res/layout/fragment_explore.xml" value="0.34270833333333334" />
-        <entry key="app/src/main/res/layout/fragment_idea_details.xml" value="0.2397025171624714" />
+        <entry key="app/src/main/res/layout/fragment_idea_details.xml" value="0.23697916666666666" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/layout/fragment_user_base_graph.xml" value="0.19947916666666668" />
         <entry key="app/src/main/res/layout/idea_chip_item.xml" value="0.2375" />
