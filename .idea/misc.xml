@@ -13,8 +13,9 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2953703703703704" />
         <entry key="app/src/main/res/layout/appbar_idea_detaild.xml" value="0.36822916666666666" />
         <entry key="app/src/main/res/layout/appbar_idea_details.xml" value="0.340625" />
+        <entry key="app/src/main/res/layout/fragment_apply_idea.xml" value="0.340625" />
         <entry key="app/src/main/res/layout/fragment_explore.xml" value="0.34270833333333334" />
-        <entry key="app/src/main/res/layout/fragment_idea_details.xml" value="0.23697916666666666" />
+        <entry key="app/src/main/res/layout/fragment_idea_details.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.31666666666666665" />
         <entry key="app/src/main/res/layout/fragment_user_base_graph.xml" value="0.19947916666666668" />
         <entry key="app/src/main/res/layout/idea_chip_item.xml" value="0.2375" />

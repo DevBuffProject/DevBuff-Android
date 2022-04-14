@@ -10,4 +10,12 @@
         <attr name="imageFromUserId" format="string"/>
     </declare-styleable>
 
+    <declare-styleable name="RoundedFrameLayout">
+        <attr name="cornerRadius" format="dimension"/>
+        <attr name="cornerRadiusTopLeft" format="dimension" />
+        <attr name="cornerRadiusTopRight" format="dimension"/>
+        <attr name="cornerRadiusBottomLeft" format="dimension"/>
+        <attr name="cornerRadiusBottomRight" format="dimension"/>
+    </declare-styleable>
+
 </resources>
