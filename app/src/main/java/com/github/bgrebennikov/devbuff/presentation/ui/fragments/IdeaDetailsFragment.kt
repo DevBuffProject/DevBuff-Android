@@ -10,6 +10,7 @@ import androidx.navigation.fragment.navArgs
 import com.github.bgrebennikov.devbuff.common.TAG
 import com.github.bgrebennikov.devbuff.common.extensions.findMainNavController
 import com.github.bgrebennikov.devbuff.data.local.explore.Status
+import com.github.bgrebennikov.devbuff.data.local.explore.ideaDetails.MappedIdeaSpecialists
 import com.github.bgrebennikov.devbuff.databinding.FragmentIdeaDetailsBinding
 import com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore.ideaDetails.IdeaSpecialistsAdapter
 import com.github.bgrebennikov.devbuff.presentation.ui.fragments.base.BaseFragment
@@ -58,8 +59,7 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
                     Status.SUCCESS -> apiResponse.data?.let { idea ->
                         binding.isLoading = false
                         binding.ideaInfo = idea
-                        adapterSpecialists.items = idea.specialist
-                        handleJoinClick()
+                        handleJoinClick(idea.specialist)
                     }
 
                     Status.ERROR -> apiResponse.message?.let { error ->
@@ -78,16 +78,16 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
 
     }
 
-    private fun handleJoinClick() {
-        with(binding.ideaJoinBtn){
+    private fun handleJoinClick(specialists: List<MappedIdeaSpecialists>) {
+        with(binding.ideaJoinBtn) {
             setOnClickListener {
                 findMainNavController().navigate(
                     IdeaDetailsFragmentDirections
-                        .actionIdeaDetailsFragmentToApplyIdeaFragment()
+                        .actionIdeaDetailsFragmentToApplyIdeaFragment(
+                            specialists.toTypedArray()
+                        )
                 )
             }
         }
     }
-
-
 }

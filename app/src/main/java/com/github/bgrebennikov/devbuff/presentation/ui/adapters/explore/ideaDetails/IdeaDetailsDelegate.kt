@@ -19,17 +19,17 @@ object IdeaDetailsDelegate {
             }
         ) {
 
-            val languagesAdapter = ChipsAdapter()
-            binding.languagesList.adapter = languagesAdapter
-
-            val frameworksAdapter = ChipsAdapter()
-            binding.technologiesList.adapter = frameworksAdapter
+//            val languagesAdapter = ChipsAdapter()
+//            binding.languagesList.adapter = languagesAdapter
+//
+//            val frameworksAdapter = ChipsAdapter()
+//            binding.technologiesList.adapter = frameworksAdapter
 
 
             bind {
                 binding.specialist = item
-                languagesAdapter.items = item.languages
-                frameworksAdapter.items = item.frameworks
+//                languagesAdapter.items = item.languages
+//                frameworksAdapter.items = item.frameworks
                 binding.executePendingBindings()
             }
 

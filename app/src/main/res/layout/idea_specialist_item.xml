@@ -7,94 +7,151 @@
         <variable
             name="specialist"
             type="com.github.bgrebennikov.devbuff.data.local.explore.ideaDetails.MappedIdeaSpecialists" />
+
+
     </data>
 
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:contentPadding="@dimen/padding_default"
-        android:layout_margin="@dimen/margin_default"
-        app:cardCornerRadius="@dimen/corners_radius_default"
+        android:padding="@dimen/padding_default"
         >
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Backend Developer"
-                android:text="@{specialist.name}"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/specialist_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{specialist.name}"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/applyBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Backend Developer" />
 
-            <TextView
-                android:id="@+id/stack"
-                android:text="@string/stack_of_languages"
-                app:hideIfNull="@{specialist.languages.empty}"
-                app:layout_constraintTop_toBottomOf="@+id/name"
-                app:layout_constraintStart_toStartOf="parent"
-                style="@style/idea_specialist_item_title_small" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/applyBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/idea_join_to_team_btn"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/languagesList"
-                tools:listitem="@layout/idea_chip_item"
-                app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
-                app:layout_constraintTop_toBottomOf="@+id/stack"
-                android:orientation="horizontal"
-                tools:itemCount="3" />
+        <TextView
+            android:id="@+id/languages"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/stack_of_languages"
+            app:languagesToString="@{specialist.languages}"
+            app:layout_constraintEnd_toStartOf="@+id/applyBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specialist_name" />
 
-            <TextView
-                android:id="@+id/technologies"
-                android:text="@string/technologies_stack_title"
-                app:hideIfNull="@{specialist.frameworks.empty}"
-                app:layout_constraintTop_toBottomOf="@+id/languagesList"
-                app:layout_constraintStart_toStartOf="parent"
-                style="@style/idea_specialist_item_title_small" />
+        <TextView
+            android:id="@+id/technologies"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/technologies"
+            app:layout_constraintEnd_toStartOf="@+id/applyBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/languages"
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/technologiesList"
-                tools:listitem="@layout/idea_chip_item"
-                app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
-                app:layout_constraintTop_toBottomOf="@+id/technologies"
-                android:orientation="horizontal"
-                tools:itemCount="3" />
+            />
 
-            <TextView
-                android:id="@+id/alreadyJoined"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="@string/already_joined_title"
-                app:layout_constraintTop_toBottomOf="@+id/technologiesList"
-                app:layout_constraintStart_toStartOf="parent"
-                android:textSize="16sp"
-                android:textColor="@color/black" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/alreadyJoinedNames"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/alreadyJoined"
-                tools:text="admin, boris, alexander, ... and over 10 developer"
-                android:textColor="#009688" />
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:contentPadding="@dimen/padding_default"-->
+<!--        android:layout_margin="@dimen/margin_default"-->
+<!--        app:cardCornerRadius="@dimen/corners_radius_default"-->
+<!--        >-->
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/ideaJoinBtn"
-                app:layout_constraintTop_toBottomOf="@id/alreadyJoinedNames"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:text="@string/idea_join_to_team_btn"
-                style="@style/ideaDetailsJoinBtn" />
+<!--            <TextView-->
+<!--                android:id="@+id/name"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                tools:text="Backend Developer"-->
+<!--                android:text="@{specialist.name}"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="18sp"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/stack"-->
+<!--                android:text="@string/stack_of_languages"-->
+<!--                app:hideIfNull="@{specialist.languages.empty}"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/name"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                style="@style/idea_specialist_item_title_small" />-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/languagesList"-->
+<!--                tools:listitem="@layout/idea_chip_item"-->
+<!--                app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/stack"-->
+<!--                android:orientation="horizontal"-->
+<!--                tools:itemCount="3" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/technologies"-->
+<!--                android:text="@string/technologies_stack_title"-->
+<!--                app:hideIfNull="@{specialist.frameworks.empty}"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/languagesList"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                style="@style/idea_specialist_item_title_small" />-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/technologiesList"-->
+<!--                tools:listitem="@layout/idea_chip_item"-->
+<!--                app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/technologies"-->
+<!--                android:orientation="horizontal"-->
+<!--                tools:itemCount="3" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/alreadyJoined"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                tools:text="@string/already_joined_title"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/technologiesList"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textColor="@color/black" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/alreadyJoinedNames"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/alreadyJoined"-->
+<!--                tools:text="admin, boris, alexander, ... and over 10 developer"-->
+<!--                android:textColor="#009688" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:id="@+id/ideaJoinBtn"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/alreadyJoinedNames"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                android:text="@string/idea_join_to_team_btn"-->
+<!--                style="@style/ideaDetailsJoinBtn" />-->
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
 
 </layout>
