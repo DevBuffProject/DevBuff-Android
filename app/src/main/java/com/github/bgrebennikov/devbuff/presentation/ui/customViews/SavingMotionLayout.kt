@@ -14,6 +14,10 @@ class SavingMotionLayout @JvmOverloads constructor(
     context, attrs, defStyleAttr
 ) {
 
+    init {
+        isSaveEnabled = true
+    }
+
     override fun onSaveInstanceState(): Parcelable {
         return SaveState(super.onSaveInstanceState(), startState, endState, targetPosition)
     }
