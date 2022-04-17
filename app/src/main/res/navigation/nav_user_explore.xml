@@ -30,5 +30,9 @@
         android:id="@+id/applyIdeaFragment"
         android:name="com.github.bgrebennikov.devbuff.presentation.ui.fragments.ApplyIdeaFragment"
         android:label="fragment_apply_idea"
-        tools:layout="@layout/fragment_apply_idea" />
+        tools:layout="@layout/fragment_apply_idea" >
+        <argument
+            android:name="specialists"
+            app:argType="com.github.bgrebennikov.devbuff.data.local.explore.ideaDetails.MappedIdeaSpecialists[]" />
+    </dialog>
 </navigation>

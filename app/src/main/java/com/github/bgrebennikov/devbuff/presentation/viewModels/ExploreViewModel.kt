@@ -68,83 +68,34 @@ class ExploreViewModel @Inject constructor(
         }
     }
 
-//    fun loadSingleIdea(_id: String){
-//
-//        Log.i(TAG, "loadSingleIdea: $this")
-//
-//        viewModelScope.launch(Dispatchers.IO) {
-//            _singleIdea.postValue(
-//                ApiResponse.loading(null)
-//            )
-//
-//            try {
-//                _singleIdea.postValue(
-//                    ApiResponse.success(
-//                        getIdeaByIdUseCase.invoke(_id)
-//                    )
-//                )
-//            } catch (e : Exception){
-//                _singleIdea.postValue(
-//                    ApiResponse.error(
-//                        data = null,
-//                        message = e.localizedMessage ?: "Error"
-//                    )
-//                )
-//                e.printStackTrace()
-//            }
-//
-//        }
-//    }
+    fun loadSingleIdea(_id: String){
 
-    fun loadSingleIdea(_id: String) = liveData(Dispatchers.IO) {
+        Log.i(TAG, "loadSingleIdea: $this")
 
-        emit(ApiResponse.loading(
-            data = null
-        ))
-
-        try{
-            emit(
-                ApiResponse.success(
-                    data = getIdeaByIdUseCase.invoke(_id)
-                )
+        viewModelScope.launch(Dispatchers.IO) {
+            _singleIdea.postValue(
+                ApiResponse.loading(null)
             )
-        } catch (e: Exception){
-            emit(
-                ApiResponse.error(
-                    data = null,
-                    message = e.localizedMessage ?: "Error Occurred!"
+
+            try {
+                _singleIdea.postValue(
+                    ApiResponse.success(
+                        getIdeaByIdUseCase.invoke(_id)
+                    )
                 )
-            )
-            e.printStackTrace()
+            } catch (e : Exception){
+                _singleIdea.postValue(
+                    ApiResponse.error(
+                        data = null,
+                        message = e.localizedMessage ?: "Error"
+                    )
+                )
+                e.printStackTrace()
+            }
+
         }
-
     }
 
-
-//
-//    fun loadIdeas(page : Int) = liveData(Dispatchers.IO){
-//        emit(ApiResponse.loading(
-//            data = IntRange(0, 3).map {
-//                IdeaPostProgress
-//            }
-//        ))
-//
-//        try{
-//            emit(
-//                ApiResponse.success(
-//                    data = getIdeasUseCase.invoke(page)
-//                )
-//            )
-//        } catch (e : Exception){
-//            emit(
-//                ApiResponse.error(
-//                    data = null,
-//                    message = e.localizedMessage ?: "Error Occurred!"
-//                )
-//            )
-//        }
-//
-//    }
 
     fun test(){
         Log.i(TAG, "test")

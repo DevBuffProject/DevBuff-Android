@@ -12,10 +12,12 @@ import com.github.bgrebennikov.devbuff.presentation.ui.GithubAuthActivity
 import com.github.bgrebennikov.devbuff.presentation.ui.MainActivity
 import com.github.bgrebennikov.devbuff.presentation.ui.SplashScreen
 import com.github.bgrebennikov.devbuff.presentation.ui.BaseActivity
+import com.github.bgrebennikov.devbuff.presentation.ui.fragments.ApplyIdeaFragment
 import com.github.bgrebennikov.devbuff.presentation.ui.fragments.guest.GuestExploreFragment
 import com.github.bgrebennikov.devbuff.presentation.ui.fragments.ExploreFragment
 import com.github.bgrebennikov.devbuff.presentation.ui.fragments.IdeaDetailsFragment
 import com.github.bgrebennikov.devbuff.presentation.ui.fragments.SettingsFragment
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -36,10 +38,13 @@ interface AppComponent {
     fun inject(fragment: SettingsFragment)
     fun inject(fragment: IdeaDetailsFragment)
 
+    fun inject(bottomSheetDialogFragment: ApplyIdeaFragment)
+
     fun inject(activity: MainActivity)
     fun inject(activity: GithubAuthActivity)
     fun inject(activity : SplashScreen)
     fun inject(application: Application)
+
     fun inject(activity: BaseActivity)
 
     @Component.Builder
