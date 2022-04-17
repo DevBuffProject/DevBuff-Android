@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.github.bgrebennikov.devbuff.common.TAG
+import com.github.bgrebennikov.devbuff.common.extensions.findMainNavController
 import com.github.bgrebennikov.devbuff.data.local.explore.Status
 import com.github.bgrebennikov.devbuff.databinding.FragmentIdeaDetailsBinding
 import com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore.ideaDetails.IdeaSpecialistsAdapter
@@ -18,9 +19,9 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
     FragmentIdeaDetailsBinding::inflate
 ) {
 
-    private val args : IdeaDetailsFragmentArgs by navArgs()
+    private val args: IdeaDetailsFragmentArgs by navArgs()
 
-    private val ideaInfo by lazy{
+    private val ideaInfo by lazy {
         args.ideaInfo
     }
 
@@ -42,13 +43,13 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
         binding.alreadyLoadedInfo = ideaInfo
         Log.i(TAG, "onViewCreated: $ideaInfo")
 
-        with(binding.ideaSpecialistsList){
-            adapter = adapterSpecialists
-        }
+//        with(binding.ideaSpecialistsList){
+//            adapter = adapterSpecialists
+//        }
 
-        viewModel.loadSingleIdea(ideaInfo.id).observe(viewLifecycleOwner){
+        viewModel.loadSingleIdea(ideaInfo.id).observe(viewLifecycleOwner) {
             it.let { apiResponse ->
-                when(apiResponse.status){
+                when (apiResponse.status) {
 
                     Status.LOADING -> {
                         binding.isLoading = true
@@ -58,6 +59,7 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
                         binding.isLoading = false
                         binding.ideaInfo = idea
                         adapterSpecialists.items = idea.specialist
+                        handleJoinClick()
                     }
 
                     Status.ERROR -> apiResponse.message?.let { error ->
@@ -76,8 +78,16 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
 
     }
 
-
-
+    private fun handleJoinClick() {
+        with(binding.ideaJoinBtn){
+            setOnClickListener {
+                findMainNavController().navigate(
+                    IdeaDetailsFragmentDirections
+                        .actionIdeaDetailsFragmentToApplyIdeaFragment()
+                )
+            }
+        }
+    }
 
 
 }

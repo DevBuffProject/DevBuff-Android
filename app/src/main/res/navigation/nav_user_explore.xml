@@ -22,5 +22,13 @@
         <argument
             android:name="ideaInfo"
             app:argType="com.github.bgrebennikov.devbuff.data.local.explore.MappedIdeaModel" />
+        <action
+            android:id="@+id/action_ideaDetailsFragment_to_applyIdeaFragment"
+            app:destination="@id/applyIdeaFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/applyIdeaFragment"
+        android:name="com.github.bgrebennikov.devbuff.presentation.ui.fragments.ApplyIdeaFragment"
+        android:label="fragment_apply_idea"
+        tools:layout="@layout/fragment_apply_idea" />
 </navigation>
