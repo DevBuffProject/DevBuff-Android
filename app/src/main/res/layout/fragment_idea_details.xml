@@ -18,13 +18,14 @@
 
     </data>
 
-    <androidx.constraintlayout.motion.widget.MotionLayout
+    <com.github.bgrebennikov.devbuff.presentation.ui.customViews.SavingMotionLayout
         android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         app:layoutDescription="@xml/fragment_idea_details_xml_scene"
         tools:context=".presentation.ui.fragments.IdeaDetailsFragment"
+        android:saveEnabled="true"
         >
 
 
@@ -161,5 +162,5 @@
 
 
 
-    </androidx.constraintlayout.motion.widget.MotionLayout>
+    </com.github.bgrebennikov.devbuff.presentation.ui.customViews.SavingMotionLayout>
 </layout>
