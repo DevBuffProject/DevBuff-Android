@@ -1,6 +1,7 @@
 package com.github.bgrebennikov.devbuff.presentation.ui.fragments
 
 import android.app.Dialog
+import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.navArgs
+import com.github.bgrebennikov.devbuff.BaseApplication
 import com.github.bgrebennikov.devbuff.R
 import com.github.bgrebennikov.devbuff.databinding.FragmentApplyIdeaBinding
 import com.github.bgrebennikov.devbuff.presentation.ui.adapters.explore.ideaDetails.IdeaSpecialistsAdapter
@@ -18,12 +20,21 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class ApplyIdeaFragment : BottomSheetDialogFragment() {
 
+    val component by lazy{
+        (requireActivity().application as BaseApplication).component
+    }
+
     private var _binding: FragmentApplyIdeaBinding? = null
     val binding get() = _binding!!
 
     private val args : ApplyIdeaFragmentArgs by navArgs()
 
     private val adapterSpecialists = IdeaSpecialistsAdapter()
+
+    override fun onAttach(context: Context) {
+        component.inject(this)
+        super.onAttach(context)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
