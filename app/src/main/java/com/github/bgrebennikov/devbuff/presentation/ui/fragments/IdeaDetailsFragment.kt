@@ -45,35 +45,34 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        if(savedInstanceState == null) {
-            viewModel.loadSingleIdea(args.ideaInfo.id)
+        if(savedInstanceState == null) viewModel.loadSingleIdea(args.ideaInfo.id)
 
-            binding.alreadyLoadedInfo = ideaInfo
-            Log.i(TAG, "onViewCreated: $ideaInfo")
+        binding.alreadyLoadedInfo = ideaInfo
+        Log.i(TAG, "onViewCreated: $ideaInfo")
 
-            viewModel.singleIdea.observe(viewLifecycleOwner) {
-                it.let { apiResponse ->
-                    when (apiResponse.status) {
+        viewModel.singleIdea.observe(viewLifecycleOwner) {
+            it.let { apiResponse ->
+                when (apiResponse.status) {
 
-                        Status.LOADING -> {
-                            binding.isLoading = true
-                        }
-
-                        Status.SUCCESS -> apiResponse.data?.let { idea ->
-                            binding.isLoading = false
-                            binding.ideaInfo = idea
-                            handleJoinClick(idea.specialist)
-                        }
-
-                        Status.ERROR -> apiResponse.message?.let { error ->
-                            Log.i(TAG, "onViewCreated: $error")
-                            binding.isLoading = false
-                        }
-
+                    Status.LOADING -> {
+                        binding.isLoading = true
                     }
+
+                    Status.SUCCESS -> apiResponse.data?.let { idea ->
+                        binding.isLoading = false
+                        binding.ideaInfo = idea
+                        handleJoinClick(idea.specialist)
+                    }
+
+                    Status.ERROR -> apiResponse.message?.let { error ->
+                        Log.i(TAG, "onViewCreated: $error")
+                        binding.isLoading = false
+                    }
+
                 }
             }
         }
+
 
         binding.appBar.onBackPressed {
             findNavController().popBackStack()
