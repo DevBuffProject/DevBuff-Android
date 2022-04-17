@@ -3,7 +3,9 @@ package com.github.bgrebennikov.devbuff.presentation.ui.fragments
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -38,35 +40,37 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
     }
 
 
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.alreadyLoadedInfo = ideaInfo
-        Log.i(TAG, "onViewCreated: $ideaInfo")
+        if(savedInstanceState == null) {
+            viewModel.loadSingleIdea(args.ideaInfo.id)
 
-//        with(binding.ideaSpecialistsList){
-//            adapter = adapterSpecialists
-//        }
+            binding.alreadyLoadedInfo = ideaInfo
+            Log.i(TAG, "onViewCreated: $ideaInfo")
 
-        viewModel.loadSingleIdea(ideaInfo.id).observe(viewLifecycleOwner) {
-            it.let { apiResponse ->
-                when (apiResponse.status) {
+            viewModel.singleIdea.observe(viewLifecycleOwner) {
+                it.let { apiResponse ->
+                    when (apiResponse.status) {
 
-                    Status.LOADING -> {
-                        binding.isLoading = true
+                        Status.LOADING -> {
+                            binding.isLoading = true
+                        }
+
+                        Status.SUCCESS -> apiResponse.data?.let { idea ->
+                            binding.isLoading = false
+                            binding.ideaInfo = idea
+                            handleJoinClick(idea.specialist)
+                        }
+
+                        Status.ERROR -> apiResponse.message?.let { error ->
+                            Log.i(TAG, "onViewCreated: $error")
+                            binding.isLoading = false
+                        }
+
                     }
-
-                    Status.SUCCESS -> apiResponse.data?.let { idea ->
-                        binding.isLoading = false
-                        binding.ideaInfo = idea
-                        handleJoinClick(idea.specialist)
-                    }
-
-                    Status.ERROR -> apiResponse.message?.let { error ->
-                        Log.i(TAG, "onViewCreated: $error")
-                        binding.isLoading = false
-                    }
-
                 }
             }
         }
@@ -74,9 +78,8 @@ class IdeaDetailsFragment : BaseFragment<FragmentIdeaDetailsBinding>(
         binding.appBar.onBackPressed {
             findNavController().popBackStack()
         }
-
-
     }
+
 
     private fun handleJoinClick(specialists: List<MappedIdeaSpecialists>) {
         with(binding.ideaJoinBtn) {
