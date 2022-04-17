@@ -37,7 +37,7 @@ class GlideImageGetter(
                 runCatching {
                     Glide.with(context)
                         .asBitmap()
-                        .diskCacheStrategy(DiskCacheStrategy.NONE)
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .load(Uri.parse(source))
                         .into(drawable)
                 }
